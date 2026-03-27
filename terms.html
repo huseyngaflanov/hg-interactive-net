@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Terms of Use — HG Interactive</title>
+    <style media="screen">
+      :root {
+        --main-bg: #0F172A;
+        --text-main: #E5E7EB;
+        --text-secondary: #9CA3AF;
+        --special-text: #6B7280;
+        --accent: #14B8A6;
+        --element-bg: #1E293B;
+        --borders: #334155;
+        --footer: #020617;
+      }
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+
+      html, body {
+        background: var(--main-bg);
+        color: var(--text-main);
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        min-height: 100vh;
+      }
+
+      /* ── NAV ── */
+      .vertical-nav {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+        z-index: 100;
+        background: rgba(30, 41, 59, 0.8);
+        backdrop-filter: blur(10px);
+        padding: 12px 16px;
+        border-radius: 12px;
+        border: 1px solid rgba(51, 65, 85, 0.5);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      }
+
+      .vertical-nav-item {
+        font-size: 14px;
+        font-weight: 500;
+        padding: 10px 14px;
+        color: var(--text-secondary);
+        background: transparent;
+        text-decoration: none;
+        border-radius: 10px;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+      }
+
+      .vertical-nav-item:hover {
+        color: var(--accent);
+        background: rgba(20, 184, 166, 0.1);
+        transform: translateY(-3px);
+      }
+
+      /* ── CONTENT ── */
+      main {
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 120px 24px 100px;
+      }
+
+      .terms-label {
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 1rem;
+      }
+
+      h1 {
+        font-size: clamp(2rem, 5vw, 3rem);
+        font-weight: 700;
+        color: var(--text-main);
+        letter-spacing: -0.02em;
+        margin-bottom: 0.5rem;
+      }
+
+      .terms-date {
+        font-size: 0.8rem;
+        color: var(--special-text);
+        margin-bottom: 3rem;
+        letter-spacing: 0.04em;
+      }
+
+      .terms-intro {
+        font-size: 1rem;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--borders);
+      }
+
+      .terms-section {
+        margin-bottom: 2.5rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-main);
+        letter-spacing: 0.06em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      h2::before {
+        content: '';
+        display: inline-block;
+        width: 3px;
+        height: 1em;
+        background: var(--accent);
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+
+      p {
+        font-size: 0.9375rem;
+        color: var(--text-secondary);
+        line-height: 1.75;
+        margin-bottom: 1rem;
+      }
+
+      p:last-child { margin-bottom: 0; }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover { text-decoration: underline; }
+
+      .terms-contact {
+        margin-top: 3rem;
+        padding: 1.5rem 2rem;
+        background: var(--element-bg);
+        border: 1px solid var(--borders);
+        border-radius: 12px;
+        font-size: 0.875rem;
+        color: var(--text-secondary);
+        line-height: 1.6;
+      }
+
+      .terms-contact a { font-weight: 500; }
+
+      /* ── FOOTER ── */
+      footer {
+        width: 100vw;
+        height: 10vh;
+        padding: 1%;
+        position: fixed;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--footer);
+        backdrop-filter: blur(10px);
+        border-top: 1px solid rgba(30, 41, 59, 0.5);
+        z-index: 10;
+        font-size: 0.75rem;
+        color: var(--special-text);
+      }
+
+      @media (max-width: 768px) {
+        .vertical-nav { left: 10px; padding: 12px 8px; gap: 8px; }
+        .vertical-nav-item { font-size: 12px; padding: 8px 10px; }
+        main { padding-top: 100px; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <nav class="vertical-nav">
+      <img src="./logo/logo.svg" alt="Logo" width="32" height="32">
+      <a href="index.html" class="vertical-nav-item">Home</a>
+      <a href="#about" class="vertical-nav-item">About</a>
+      <a href="#services" class="vertical-nav-item">Services</a>
+      <a href="#contact" class="vertical-nav-item">Contact</a>
+    </nav>
+
+    <main>
+      <p class="terms-label">Legal</p>
+      <h1>Terms of Use</h1>
+      <p class="terms-date">Effective date: March 27, 2026</p>
+
+      <p class="terms-intro">
+        Please read these Terms of Use carefully before using the HG Interactive website. By accessing or using our site, you agree to be bound by these terms. If you do not agree, please do not use the site.
+      </p>
+
+      <div class="terms-section">
+        <h2>General Use</h2>
+        <p>
+          This website is operated by HG Interactive and is intended for informational and promotional purposes. You may use this site for lawful purposes only. You agree not to use the site in any way that could damage, disable, or impair the site or interfere with any other party's use of it.
+        </p>
+        <p>
+          We reserve the right to modify, suspend, or discontinue any part of the site at any time without notice. We are not liable to you or any third party for any such modifications or discontinuation.
+        </p>
+      </div>
+
+      <div class="terms-section">
+        <h2>Waitlist & Email Collection</h2>
+        <p>
+          By submitting your email address through our waitlist form, you consent to receive communications from HG Interactive related to our products, services, and updates. We will not send unsolicited commercial emails unrelated to our offerings.
+        </p>
+        <p>
+          You may withdraw your consent at any time by contacting us at <a href="mailto:contact@hginteractive.com">contact@hginteractive.com</a>. We will remove your email from our list promptly upon request.
+        </p>
+      </div>
+
+      <div class="terms-section">
+        <h2>Intellectual Property</h2>
+        <p>
+          All content on this site — including but not limited to text, graphics, logos, icons, images, and software — is the property of HG Interactive and is protected by applicable intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any content on this site without our express written permission.
+        </p>
+        <p>
+          The HG Interactive name, logo, and all related marks are trademarks of HG Interactive. Nothing on this site grants you any license to use them.
+        </p>
+      </div>
+
+      <div class="terms-section">
+        <h2>Privacy & Data Policy</h2>
+        <p>
+          We collect only the information you voluntarily provide, such as your email address when joining the waitlist. We do not sell, rent, or share your personal information with third parties for marketing purposes.
+        </p>
+        <p>
+          We may collect non-personal data such as IP addresses, browser type, and device information for analytics and security purposes. This data is used solely to improve the site experience and is not linked to your personal identity.
+        </p>
+        <p>
+          We take reasonable measures to protect your data, but no transmission over the internet is 100% secure. By using this site you acknowledge and accept this risk.
+        </p>
+      </div>
+
+      <div class="terms-section">
+        <h2>Limitation of Liability</h2>
+        <p>
+          To the fullest extent permitted by law, HG Interactive shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, this site or its content.
+        </p>
+        <p>
+          The site and its content are provided on an "as is" and "as available" basis without warranties of any kind, either express or implied. We do not warrant that the site will be uninterrupted, error-free, or free of viruses or other harmful components.
+        </p>
+      </div>
+
+      <div class="terms-contact">
+        Questions about these terms? Contact us at <a href="mailto:contact@hginteractive.com">contact@hginteractive.com</a>. We're happy to clarify anything.
+      </div>
+    </main>
+
+    <footer>
+      © 2026 HG Interactive. All Rights Reserved.
+    </footer>
+
+  </body>
+</html>

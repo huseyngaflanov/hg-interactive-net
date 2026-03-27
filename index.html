@@ -8,21 +8,6 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Welcome</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.8.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.8.0/firebase-app-check-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.8.0/firebase-performance-compat.js"></script>
-    <!-- Firebase config is initialized inline below -->
-
     <style media="screen">
       :root {
         --main-bg: #0F172A;            /* deep navy background */
@@ -68,7 +53,6 @@
         min-height: 100vh;
         padding: 20px;
         position: relative;
-        overflow: hidden;
       }
 
       /* Animated background elements */
@@ -136,6 +120,7 @@
         left: 20px;
         display: flex;
         flex-direction: row;
+        align-items: center;
         gap: 12px;
         z-index: 100;
         background: rgba(30, 41, 59, 0.8);
@@ -280,19 +265,33 @@
         box-shadow: 0 8px 16px rgba(20, 184, 166, 0.3);
       }
 
-      .site-footer {
-        width: 100%;
+      .social-icon-x {
+        color: gray;
+      }
+
+      .social-icon-x:hover {
+        color: black;
+      }
+
+      footer {
+        width: 100vw;
+        height: 10vh;
+        padding: 1%;
+        position: fixed;
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
         background: var(--footer);
         backdrop-filter: blur(10px);
-        color: var(--special-text);
-        text-align: center;
-        padding: 24px 20px;
-        font-size: 14px;
-        letter-spacing: 0.3px;
         border-top: 1px solid rgba(30, 41, 59, 0.5);
-        margin-top: auto;
-        position: relative;
         z-index: 10;
+        font-size: 0.75rem;
+      }
+
+      .footer-text {
+        color: var(--special-text);
       }
 
       .footer-content {
@@ -369,140 +368,48 @@
   </head>
   <body>
     <nav class="vertical-nav">
-      <img src="./logo/logo.svg" alt="Logo" style="vertical-align: middle;" width="32" height="32">
+      <img src="./logo/logo.svg" alt="Logo" width="32" height="32">
       <!-- Example vertical navigation icons -->
       <a href="#home" class="vertical-nav-item" title="Home">Home</a>
       <a href="#about" class="vertical-nav-item" title="About">About</a>
       <a href="#services" class="vertical-nav-item" title="Services">Services</a>
       <a href="#contact" class="vertical-nav-item" title="Contact">Contact</a>
     </nav>
-    <div id="message">
-      <!-- logo from ./logo/logo.svg -->
-      <img id="main-logo" src="./logo/inline.svg" width="60%" alt="" srcset="">
-      <!-- <h2>HG Interactive</h2> -->
-      <p class="description">A creative <span class="dev-group-text">developer group</span> crafting innovative apps, websites, and games that push the boundaries of interactive experiences.</p>
+    <main>
+      <div id="message">
+        <!-- logo from ./logo/logo.svg -->
+        <img id="main-logo" src="./logo/inline.svg" width="60%" alt="" srcset="">
+        <!-- <h2>HG Interactive</h2> -->
+        <p class="description">A creative <span class="dev-group-text">developer group</span> crafting innovative apps, websites, and games that push the boundaries of interactive experiences.</p>
 
-      Examples: <br>
-      <button class="main-button">Example</button>
-      <button class="secondary-button">Example</button>
-      <form class="waitlist-form" id="waitlist-form">
-        <input class="waitlist-input" id="waitlist-email" type="email" placeholder="Enter your email" autocomplete="email" required>
-        <button class="waitlist-button" id="waitlist-button" type="submit">Join the waitlist</button>
-      </form>
-      <p class="waitlist-status" id="waitlist-status"></p>
-      <div class="social-links">
-        <a href="https://x.com/Interactiv59730" target="_blank" rel="noopener noreferrer" class="social-icon" title="Twitter">𝕏</a>
-        <a href="https://github.com/hginteractive" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">🐙</a>
-        <!-- <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Discord">💬</a> -->
-        <a href="https://instagram.com/hginteractive" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">📷</a>
-        <a href="mailto:contact@hginteractive.com" class="social-icon" title="Email">✉️</a>
+        Examples: <br>
+        <button class="main-button">Example</button>
+        <button class="secondary-button">Example</button>
+        <button class="main-button">Example</button>
+        <button class="secondary-button">Example</button>
+        <button class="main-button">Example</button>
+        <button class="secondary-button">Example</button>
+        <button class="main-button">Example</button>
+        <button class="secondary-button">Example</button>
+
+        <form class="waitlist-form" id="waitlist-form">
+          <input class="waitlist-input" id="waitlist-email" type="email" placeholder="Enter your email" autocomplete="email" required>
+          <button class="waitlist-button" id="waitlist-button" type="submit">Join the waitlist</button>
+        </form>
+        <p class="waitlist-status" id="waitlist-status"></p>
+        <div class="social-links">
+          <a href="https://x.com/Interactiv59730" target="_blank" rel="noopener noreferrer" class="social-icon social-icon-x" title="Twitter">𝕏</a>
+          <a href="https://github.com/hginteractive" target="_blank" rel="noopener noreferrer" class="social-icon" title="GitHub">🐙</a>
+          <!-- <a href="https://discord.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Discord">💬</a> -->
+          <a href="https://instagram.com/hginteractive" target="_blank" rel="noopener noreferrer" class="social-icon" title="Instagram">📷</a>
+          <a href="mailto:contact@hginteractive.com" class="social-icon" title="Email">✉️</a>
+        </div>
       </div>
-    </div>
-    <footer class="site-footer">
-      <div class="footer-content">
-        © 2026 HG Interactive. All Rights Reserved.
-      </div>
+    </main>
+
+    <footer>
+      © 2026 HG Interactive. All Rights Reserved.
     </footer>
 
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const firebaseConfig = {
-          apiKey: "AIzaSyBAbUoIm5EJQKTe_Qx28yJBj9piKOXVbks",
-          authDomain: "hg-interactive.firebaseapp.com",
-          projectId: "hg-interactive",
-          storageBucket: "hg-interactive.firebasestorage.app",
-          messagingSenderId: "406557687843",
-          appId: "1:406557687843:web:661c3850fd004dee6c3196",
-          measurementId: "G-7EE2HWNKL4"
-        };
-        firebase.initializeApp(firebaseConfig);
-
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        firebase.auth().onAuthStateChanged(user => {
-          if (user) {
-            console.log('User is signed in:', user);
-          } else {
-            console.log('No user is signed in.');
-          }
-        });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => {
-        //   console.log(firebase.messaging().getToken());
-        // });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        firebase.analytics(); // call to activate
-        firebase.analytics().logEvent('tutorial_completed');
-        firebase.performance(); // call to activate
-        const appCheck = firebase.appCheck();
-        appCheck.activate(
-          '6LcDVGssAAAAAABEPvuJji_3DWBbjiCyNLaCh6F6', // from Firebase Console
-          true // optional: auto refresh
-        );
-
-        const waitlistForm = document.getElementById('waitlist-form');
-        const waitlistInput = document.getElementById('waitlist-email');
-        const waitlistStatus = document.getElementById('waitlist-status');
-        const waitlistButton = document.getElementById('waitlist-button');
-        const addWaitlistEmail = firebase.functions().httpsCallable('addWaitlistEmail');
-
-        const setWaitlistStatus = (message, isError = false) => {
-          waitlistStatus.textContent = message;
-          waitlistStatus.style.color = isError ? '#fca5a5' : '#cbd5e1';
-        };
-
-        waitlistForm.addEventListener('submit', async (event) => {
-          event.preventDefault();
-          const email = waitlistInput.value.trim();
-
-          if (!email) {
-            setWaitlistStatus('Please enter a valid email address.', true);
-            return;
-          }
-
-          waitlistButton.disabled = true;
-          setWaitlistStatus('Adding you to the waitlist...');
-
-          addWaitlistEmail({ email })
-            .then((result) => {
-              setWaitlistStatus('You are on the list! We will be in touch.');
-              waitlistForm.reset();
-            })
-            .catch((error) => {
-              console.error(error);
-              setWaitlistStatus('Something went wrong. Please try again.', true);
-            })
-            .finally(() => {
-              waitlistButton.disabled = false;
-            });
-        });
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth',
-            'database',
-            'firestore',
-            'functions',
-            'messaging',
-            'storage',
-            'analytics',
-            'remoteConfig',
-            'performance',
-            'appcheck',
-          ].filter(feature => typeof app[feature] === 'function');
-          // `Firebase SDK loaded with ${features.join(', ')}`
-        } catch (e) {
-          console.error(e);
-          // 'Error loading the Firebase SDK, check the console.'
-        }
-      });
-    </script>
   </body>
 </html>
